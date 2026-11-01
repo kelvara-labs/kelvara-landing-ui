@@ -51,27 +51,29 @@ CSS='''
 @font-face{font-family:"Hanken Grotesk";font-weight:400;font-display:swap;src:url(/assets/fonts/hanken-grotesk-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:"Hanken Grotesk";font-weight:500;font-display:swap;src:url(/assets/fonts/hanken-grotesk-latin-500-normal.woff2) format("woff2")}
 @font-face{font-family:"Fragment Mono";font-weight:400;font-display:swap;src:url(/assets/fonts/fragment-mono-latin-400-normal.woff2) format("woff2")}
-:root{color-scheme:dark;--night:#07080b;--raise:#0c0d11;--bone:#ecebe5;--text:#c4c3bd;--mute:#8d8f95;--hair:rgba(236,235,229,.12);--hair2:rgba(236,235,229,.2);--violet:#9b97ff;--alarm:#ff6a3d;--ok:#8fd4a4;--warn:#e7c06a;--mono:"Fragment Mono",ui-monospace,monospace}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:96px;scrollbar-color:#2a2c31 var(--night)}
+/* colours: same tokens as app.kelvara.xyz and the landing page */
+:root{color-scheme:dark;--night:#121716;--raise:#161c1a;--bone:#f5f7f2;--text:#c4cbc6;--mute:#7d8983;--hair:rgba(196,203,198,.12);--hair2:rgba(196,203,198,.22);--accent:#e7ff81;--alarm:#ff4d4d;--ok:#8fd4a4;--warn:#ffb45e;--mono:"Fragment Mono",ui-monospace,monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:96px;scrollbar-color:#252d29 var(--night)}
 body{margin:0;background:var(--night);color:var(--text);font:400 16px/1.7 "Hanken Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:var(--bone);text-decoration-color:var(--hair2);text-underline-offset:4px}a:hover{text-decoration-color:var(--bone)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
-.top{position:sticky;top:0;z-index:30;height:72px;border-bottom:1px solid var(--hair);background:rgba(7,8,11,.86);backdrop-filter:blur(14px)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.top{position:sticky;top:0;z-index:30;height:72px;border-bottom:1px solid var(--hair);background:rgba(18,23,22,.86);backdrop-filter:blur(14px)}
 .top-in{max-width:1440px;height:100%;margin:auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
-.brand{color:var(--bone);text-decoration:none;font-weight:500;font-size:19px;letter-spacing:-.02em}.brand small{margin-left:10px;font:12.5px var(--mono);color:var(--mute);letter-spacing:0}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--bone);text-decoration:none;font-weight:500;font-size:19px;letter-spacing:-.02em}
+.brand img{display:block;width:24px;height:24px}.brand small{margin-left:10px;font:12.5px var(--mono);color:var(--mute);letter-spacing:0}
 .top nav{display:flex;gap:28px;align-items:center}.top nav a{text-decoration:none;color:var(--mute);font-size:15px}.top nav a:hover{color:var(--bone)}
-.launch{display:inline-flex;align-items:center;height:36px;padding:0 16px;border-radius:999px;background:var(--bone);color:var(--night)!important;font-weight:500;font-size:14px!important}
+.launch{display:inline-flex;align-items:center;height:36px;padding:0 16px;border-radius:999px;background:var(--accent);color:var(--night)!important;font-weight:500;font-size:14px!important}
 .menu{display:none;border:1px solid var(--hair2);background:none;color:var(--bone);padding:7px 14px;border-radius:999px;font:12.5px var(--mono)}
 .shell{max-width:1440px;margin:auto;display:grid;grid-template-columns:220px minmax(0,760px) 180px;gap:72px;padding:64px 32px 120px}
 .side,.toc{position:sticky;top:112px;align-self:start;max-height:calc(100vh - 136px);overflow:auto;scrollbar-width:none}
 .nav-group{margin-bottom:28px}
 .nav-group>b,.toc>b{display:block;margin-bottom:10px;color:var(--mute);font:400 11px var(--mono);letter-spacing:.08em;text-transform:uppercase}
 .nav-group a{display:block;padding:5px 0 5px 14px;border-left:1px solid var(--hair);color:var(--mute);text-decoration:none;font-size:14px}
-.nav-group a:hover{color:var(--bone)}.nav-group a.active{color:var(--bone);border-left-color:var(--violet)}
+.nav-group a:hover{color:var(--bone)}.nav-group a.active{color:var(--bone);border-left-color:var(--accent)}
 .toc a{display:block;padding:4px 0;color:var(--mute);text-decoration:none;font-size:13px}.toc a:hover{color:var(--bone)}
 .article{min-width:0}
 .crumb{font:12px var(--mono);color:var(--mute);margin-bottom:40px}
-.eyebrow{margin:0;font:12.5px var(--mono);color:var(--violet)}
+.eyebrow{margin:0;font:12.5px var(--mono);color:var(--accent)}
 h1{margin:14px 0 24px;max-width:760px;color:var(--bone);font-weight:300;font-size:clamp(42px,5.6vw,72px);line-height:.98;letter-spacing:-.05em;text-wrap:balance}
 h2{margin:0 0 20px;color:var(--bone);font-weight:400;font-size:30px;line-height:1.1;letter-spacing:-.035em}
 h3{margin:0 0 8px;color:var(--bone);font-weight:500;font-size:16px;letter-spacing:-.01em}
@@ -84,11 +86,11 @@ h3{margin:0 0 8px;color:var(--bone);font-weight:500;font-size:16px;letter-spacin
 .card p{margin:0;font-size:14px;color:var(--mute)}
 .product-map{display:flex;align-items:stretch;margin:32px 0;border:1px solid var(--hair)}
 .map-node{flex:1;padding:18px 12px;font:12.5px var(--mono);color:var(--bone);text-align:center}
-.product-map>span{display:flex;align-items:center;padding:0 2px;color:var(--violet);font:12.5px var(--mono)}
+.product-map>span{display:flex;align-items:center;padding:0 2px;color:var(--accent);font:12.5px var(--mono)}
 .badge{display:inline-flex;align-items:center;gap:8px;margin:12px 20px 0 0;font:12px var(--mono);color:var(--mute)}
 .badge::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
-.live{color:var(--ok)}.beta{color:var(--warn)}.dev{color:var(--violet)}.planned{color:var(--mute)}.planned::before{background:none;box-shadow:inset 0 0 0 1px currentColor}
-.callout{margin:28px 0;padding:4px 0 4px 20px;border-left:1px solid var(--violet)}
+.live{color:var(--ok)}.beta{color:var(--warn)}.dev{color:var(--accent)}.planned{color:var(--mute)}.planned::before{background:none;box-shadow:inset 0 0 0 1px currentColor}
+.callout{margin:28px 0;padding:4px 0 4px 20px;border-left:1px solid var(--accent)}
 .callout strong{display:block;margin-bottom:4px;color:var(--bone);font-weight:500}.callout p{margin:0;color:var(--text)}
 .callout.warn{border-left-color:var(--alarm)}
 .table-wrap{overflow:auto;margin:28px 0;border-top:1px solid var(--hair2)}
@@ -114,7 +116,7 @@ def render(slug,title,group,lead,body,toc):
  pager='<nav class="next">'+(f'<a href="/docs/{prev[1]+"/" if prev[1] else ""}"><small>Previous</small>← {prev[0]}</a>' if prev else '<span></span>')+(f'<a href="/docs/{nxt[1]+"/" if nxt[1] else ""}"><small>Next</small>{nxt[0]} →</a>' if nxt else '')+'</nav>'
  right='<aside class="toc"><b>On this page</b>'+''.join(f'<a href="#{x}">{t}</a>' for x,t in toc)+'</aside>'
  url='https://kelvara.xyz/docs/'+(slug+'/' if slug else '')
- html=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | Kelvara Docs</title><meta name="description" content="{escape(lead,quote=True)}"><link rel="canonical" href="{url}"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#07080b"><link rel="preload" href="/assets/fonts/hanken-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/docs/docs.css"></head><body><header class="top"><div class="top-in"><a class="brand" href="/">Kelvara<small>Docs</small></a><nav><a href="/">Product</a><a href="/docs/">Docs</a><button class="menu" aria-expanded="false">Menu</button><a class="launch" href="https://app.kelvara.xyz/">Open app ↗</a></nav></div></header><div class="shell"><aside class="side">{nav}</aside><main class="article"><div class="crumb">Kelvara Docs / {group}</div><p class="eyebrow">{group}</p><h1>{title}</h1><p class="lead">{lead}</p>{body}{pager}<p class="updated">Verified against current application contracts · 29 October 2026</p><p class="updated">Support <a href="mailto:help@kelvara.xyz">help@kelvara.xyz</a> · General <a href="mailto:contact@kelvara.xyz">contact@kelvara.xyz</a> · <a href="https://x.com/kelvara_xyz" target="_blank" rel="noopener noreferrer">X</a> · <a href="https://www.linkedin.com/company/kelvara-defi-security" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="/privacy/">Privacy</a></p></main>{right}</div><script src="/docs/docs.js"></script></body></html>'''
+ html=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | Kelvara Docs</title><meta name="description" content="{escape(lead,quote=True)}"><link rel="canonical" href="{url}"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#121716"><link rel="preload" href="/assets/fonts/hanken-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/docs/docs.css"></head><body><header class="top"><div class="top-in"><a class="brand" href="/"><img src="/assets/kelvara-mark.png" alt="" width="24" height="24">Kelvara<small>Docs</small></a><nav><a href="/">Product</a><a href="/docs/">Docs</a><button class="menu" aria-expanded="false">Menu</button><a class="launch" href="https://app.kelvara.xyz/">Open app ↗</a></nav></div></header><div class="shell"><aside class="side">{nav}</aside><main class="article"><div class="crumb">Kelvara Docs / {group}</div><p class="eyebrow">{group}</p><h1>{title}</h1><p class="lead">{lead}</p>{body}{pager}<p class="updated">Verified against current application contracts · 29 October 2026</p><p class="updated">Support <a href="mailto:help@kelvara.xyz">help@kelvara.xyz</a> · General <a href="mailto:contact@kelvara.xyz">contact@kelvara.xyz</a> · <a href="https://x.com/kelvara_xyz" target="_blank" rel="noopener noreferrer">X</a> · <a href="https://www.linkedin.com/company/kelvara-defi-security" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></main>{right}</div><script src="/docs/docs.js"></script></body></html>'''
  path=R/(slug or '.')/'index.html';path.parent.mkdir(parents=True,exist_ok=True);path.write_text(html)
 R.mkdir(exist_ok=True);(R/'docs.css').write_text(CSS);(R/'docs.js').write_text(JS)
 for slug,args in P.items(): render(slug,*args)
