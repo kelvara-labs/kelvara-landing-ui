@@ -2,7 +2,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 ROOT=Path(__file__).parent
 DOCS=ROOT/'docs'
-SLUGS=['','how-it-works','supported-positions','positions','governance','safeguards','protection','exitrail','wallet-exposure','evidence','monitoring-health','self-custody','security','limitations','developers/exitrail-api','developers/webhooks','developers/local-execution','developers/contracts','developers/test-environment','reference/kamino','reference/squads-v4','reference/networks-addresses']
+SLUGS=['','how-it-works','supported-positions','contact','positions','governance','safeguards','protection','exitrail','wallet-exposure','evidence','monitoring-health','self-custody','security','limitations','developers/exitrail-api','developers/webhooks','developers/local-execution','developers/contracts','developers/test-environment','reference/kamino','reference/squads-v4','reference/networks-addresses']
 def page(slug): return (DOCS/slug/'index.html').read_text()
 def test_docs_contract():
     for slug in SLUGS:

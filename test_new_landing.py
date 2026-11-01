@@ -19,6 +19,7 @@ def test_on_watch_landing_contract():
     assert 'src="/assets/analytics.js"' in HTML and 'persistence: "memory"' in analytics and "eu.i.posthog.com" in analytics
     assert "disable_session_recording: true" in analytics and "mask_all_text: true" in analytics
     assert 'href="/terms/"' in HTML and 'id="legal"' in HTML
+    assert 'href="/docs/contact/"' in HTML and "help@kelvara.xyz" in (ROOT / "docs/contact/index.html").read_text()
     terms = (ROOT / "terms/index.html").read_text()
     assert "Terms of Use" in terms and "seed phrase" in terms and "Polish law" in terms and 'href="/privacy/"' in terms
     privacy = (ROOT / "privacy/index.html").read_text()
