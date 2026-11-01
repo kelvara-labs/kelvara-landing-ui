@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.join(__dirname, '..');
-const htmlFiles = ['index.html', 'demo/index.html', 'docs/index.html'];
+const htmlFiles = ['index.html', 'demo/index.html', 'docs/index.html', 'privacy/index.html', 'terms/index.html'];
 const localReferencePattern = /(?:href|src)="(\/[^"#?]+|\.\.\/[^"#?]+|\.\/[^"#?]+)"/g;
 
 function resolveReference(file, reference) {

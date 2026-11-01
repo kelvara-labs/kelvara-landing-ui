@@ -10,109 +10,128 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<meta name="theme-color" content="#07080b">
+<meta name="theme-color" content="#121716">
 <style>
 @font-face{font-family:"Hanken Grotesk";font-weight:300;font-display:swap;src:url(/assets/fonts/hanken-grotesk-latin-300-normal.woff2) format("woff2")}
 @font-face{font-family:"Hanken Grotesk";font-weight:400;font-display:swap;src:url(/assets/fonts/hanken-grotesk-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:"Hanken Grotesk";font-weight:500;font-display:swap;src:url(/assets/fonts/hanken-grotesk-latin-500-normal.woff2) format("woff2")}
 @font-face{font-family:"Fragment Mono";font-weight:400;font-display:swap;src:url(/assets/fonts/fragment-mono-latin-400-normal.woff2) format("woff2")}
-:root{color-scheme:dark;--night:#07080b;--bone:#ecebe5;--mute:#8d8f95;--hair:rgba(236,235,229,.12);--violet:#9b97ff;--mono:"Fragment Mono",ui-monospace,monospace}
+/* colours: same tokens as app.kelvara.xyz and the landing page */
+:root{color-scheme:dark;--night:#121716;--panel:#161c1a;--bone:#f5f7f2;--text:#c4cbc6;--mute:#7d8983;--hair:rgba(196,203,198,.12);--accent:#e7ff81;--mono:"Fragment Mono",ui-monospace,monospace}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-color:#252d29 var(--night)}
 body{margin:0;background:var(--night);color:var(--bone);font:400 17px/1.6 "Hanken Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-underline-offset:3px}
-a:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
 header .wrap{height:76px;display:flex;align-items:center;justify-content:space-between}
-.word{font-weight:500;font-size:19px;letter-spacing:-.02em;text-decoration:none}
-header nav{display:flex;gap:28px;font-size:15px;color:var(--mute)}
+.word{display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:19px;letter-spacing:-.02em;text-decoration:none}
+.word img{display:block;width:24px;height:24px}
+header nav{display:flex;gap:28px;align-items:center;font-size:15px;color:var(--mute)}
 header nav a{text-decoration:none}
 header nav a:hover{color:var(--bone)}
-.cap{font:12.5px/1.4 var(--mono);color:var(--mute)}
+header .btn{display:inline-flex;align-items:center;height:36px;padding:0 16px;border-radius:999px;background:var(--accent);color:var(--night);font-weight:500;font-size:14px}
+header .btn:hover{color:var(--night)}
+.cap{font:12.5px/1.4 var(--mono);color:var(--accent)}
 main{max-width:720px;padding:12vh 0 14vh}
 h1{margin:14px 0 0;font-weight:300;font-size:clamp(44px,6vw,80px);line-height:.98;letter-spacing:-.05em}
-.lead{margin:24px 0 0;color:var(--mute);font-size:18px}
+.lead{margin:24px 0 0;color:var(--text);font-size:18px}
+.short{margin:40px 0 0;padding:22px 24px;border:1px solid var(--hair);border-radius:14px;background:var(--panel)}
+.short b{display:block;margin-bottom:6px;font:400 12.5px var(--mono);color:var(--mute)}
+.short ul{margin:0}
 h2{margin:56px 0 0;padding-top:24px;border-top:1px solid var(--hair);font-weight:400;font-size:24px;letter-spacing:-.02em}
-p,li{color:#c4c3bd}
+h2 span{margin-right:12px;font:400 13px var(--mono);color:var(--mute);vertical-align:3px}
+p,li{color:var(--text)}
 ul{padding-left:20px}
 li{margin:6px 0}
+li::marker{color:var(--mute)}
 strong{font-weight:500;color:var(--bone)}
 footer{border-top:1px solid var(--hair);padding:26px 0;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 22px}
 footer a{text-decoration:none}
 footer a:hover{color:var(--bone)}
-@media(max-width:860px){header nav a:not(:first-child){display:none}}
+@media(max-width:860px){header nav a:not(.btn){display:none}main{padding:56px 0 72px}h2{margin-top:44px}.short{padding:18px}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
-  <a class="word" href="/">Kelvara</a>
-  <nav aria-label="Primary"><a href="/docs/">Docs</a><a href="https://app.kelvara.xyz/">Launch app</a></nav>
+  <a class="word" href="/"><img src="/assets/kelvara-mark.png" alt="" width="24" height="24">Kelvara</a>
+  <nav aria-label="Primary"><a href="/docs/">Docs</a><a class="btn" href="https://app.kelvara.xyz/">Launch app</a></nav>
 </div></header>
 
 <div class="wrap"><main>
-  <span class="cap">Last updated 29 October 2026</span>
+  <span class="cap">Last updated 1 November 2026</span>
   <h1>Privacy Policy</h1>
-  <p class="lead">Kelvara protects onchain positions without holding your keys or your funds. We apply the same idea to your information: we collect what the product needs to work, and nothing more.</p>
+  <p class="lead">Kelvara protects onchain positions without holding your keys or your funds. We treat your information the same way: we use what the product needs to work, and nothing more.</p>
 
-  <h2>Who we are</h2>
+  <div class="short"><b>In short</b><ul>
+    <li>We never ask for your name, email, seed phrase or private keys to use Kelvara.</li>
+    <li>This website sets no cookies. It counts visits anonymously, without storing anything in your browser.</li>
+    <li>The app uses your wallet address, the exits you sign, session and security data, and anonymous usage analytics.</li>
+    <li>We don't sell your information or use it for advertising.</li>
+  </ul></div>
+
+  <h2><span>01</span>Who we are</h2>
   <p>Kelvara is operated by its founding team. The legal entity is being formed; once it is registered, this policy will name it as the controller of your information. Until then, questions and requests go to <a href="mailto:contact@kelvara.xyz">contact@kelvara.xyz</a>.</p>
 
-  <h2>What this policy covers</h2>
-  <p>This website (kelvara.xyz and its documentation) and the Kelvara app at app.kelvara.xyz.</p>
-
-  <h2>This website</h2>
+  <h2><span>02</span>This website</h2>
   <ul>
-    <li><strong>No cookies or analytics.</strong> The website sets no cookies and runs no analytics or advertising trackers. Fonts are served from our own domain.</li>
+    <li><strong>No cookies.</strong> kelvara.xyz and its documentation set no cookies and run no advertising trackers. Fonts are served from our own domain.</li>
+    <li><strong>Anonymous analytics.</strong> We use PostHog, hosted in the EU, to understand in aggregate how the website is used. It stores nothing on your device, does not record sessions or identify you, and does not keep IP addresses. Your browser's "Do Not Track" setting is respected.</li>
     <li><strong>Hosting.</strong> The site is hosted on GitHub Pages. GitHub may log technical data such as your IP address and browser type to deliver and secure the site, under its own privacy statement.</li>
     <li><strong>Live slot feed.</strong> The homepage shows the current Solana slot by connecting your browser directly to a public Solana RPC endpoint. That operator can see your IP address for the connection.</li>
     <li><strong>Booking a demo.</strong> Demo bookings go through Calendly. What you enter there is handled by Calendly and shared with us so we can hold the meeting.</li>
   </ul>
 
-  <h2>The Kelvara app</h2>
-  <p>When you use the app, we process:</p>
+  <h2><span>03</span>The Kelvara app</h2>
+  <p>When you use app.kelvara.xyz, we process:</p>
   <ul>
-    <li><strong>Wallet addresses</strong> you connect or check, with the onchain data linked to them, such as positions, token accounts, delegates and transactions. This data is already public on the Solana blockchain.</li>
+    <li><strong>Wallet addresses</strong> you connect or check, with the onchain data linked to them, such as positions, token accounts, delegates and transactions. This data is already public on the Solana blockchain, but a wallet address can still identify you.</li>
     <li><strong>Signed protection transactions.</strong> If you enroll in protection, we store the exact transactions you signed in advance, encrypted at rest, so they can be sent when your policy says so. We cannot alter them.</li>
     <li><strong>Protection settings</strong> such as policies, grants, and execution and reconciliation records.</li>
     <li><strong>Session and security data</strong> such as wallet sign-in proofs, session identifiers, IP addresses and request logs, used to authenticate you and keep the service safe.</li>
+    <li><strong>Usage analytics.</strong> The app uses PostHog, hosted in the EU, to understand in aggregate how the product is used. Analytics are not linked to your wallet address and do not record sessions. PostHog stores a random identifier in your browser.</li>
+    <li><strong>Browser storage.</strong> The app saves the wallet you last used and unfinished enrollment steps in your browser's local storage, so you can pick up where you left off. You can clear it at any time in your browser settings.</li>
   </ul>
-  <p><strong>We never ask for or receive your seed phrase or private keys.</strong> Signing always happens in your own wallet.</p>
+  <p>We never ask for or receive your seed phrase or private keys. Signing always happens in your own wallet.</p>
 
-  <h2>Why we use it</h2>
+  <h2><span>04</span>Why we use it</h2>
   <ul>
     <li>To provide the service you asked for: monitoring, alerts, wallet checks and protection. (Legal basis: performance of a contract.)</li>
     <li>To secure the service, prevent abuse and fix problems. (Legal basis: legitimate interests.)</li>
+    <li>To understand how the website and app are used and improve them. (Legal basis: legitimate interests, or your consent where the law requires it.)</li>
     <li>To answer you when you contact us. (Legal basis: legitimate interests.)</li>
     <li>To meet legal obligations where they apply.</li>
   </ul>
   <p>We do not sell your information or use it for advertising.</p>
 
-  <h2>Who we share it with</h2>
+  <h2><span>05</span>Who we share it with</h2>
   <ul>
-    <li><strong>Infrastructure providers</strong> that host and run the service, such as cloud hosting, storage and Solana RPC providers, acting on our instructions.</li>
+    <li><strong>Infrastructure providers</strong> that host and run the service, such as cloud hosting, storage, Solana RPC and analytics (PostHog) providers, acting on our instructions.</li>
     <li><strong>The Solana network.</strong> Transactions we submit on your behalf become public onchain, as with any Solana transaction.</li>
     <li><strong>Authorities</strong> where the law requires it.</li>
   </ul>
   <p>Some providers may process data outside your country. Where that happens, we rely on appropriate safeguards such as standard contractual clauses.</p>
 
-  <h2>How long we keep it</h2>
-  <p>We keep account and protection data while you use the service. Signed transactions are kept until they are used, revoked or invalidated. Execution records are kept as long as needed to evidence what happened. Logs are kept for a limited period for security. When data is no longer needed, we delete or anonymize it. We cannot delete data recorded on the blockchain.</p>
+  <h2><span>06</span>How long we keep it</h2>
+  <p>We keep account and protection data while you use the service. Signed transactions are kept until they are used, revoked or invalidated. Execution records are kept as long as needed to evidence what happened. Logs and analytics are kept for a limited period. When data is no longer needed, we delete or anonymize it. We cannot delete data recorded on the blockchain.</p>
 
-  <h2>Your rights</h2>
-  <p>Depending on where you live, you can ask to access, correct, delete, restrict or port your information, and you can object to how we use it. To make a request, email <a href="mailto:contact@kelvara.xyz">contact@kelvara.xyz</a>. You can also complain to your local data protection authority.</p>
+  <h2><span>07</span>Your rights</h2>
+  <p>Depending on where you live, you can ask to access, correct, delete, restrict or port your information, and you can object to how we use it. To make a request, email <a href="mailto:contact@kelvara.xyz">contact@kelvara.xyz</a>. You can also complain to your local data protection authority; in Poland, that is the President of the Personal Data Protection Office (UODO).</p>
 
-  <h2>Children</h2>
+  <h2><span>08</span>Children</h2>
   <p>Kelvara is not intended for anyone under 18.</p>
 
-  <h2>Changes</h2>
+  <h2><span>09</span>Changes</h2>
   <p>If we change this policy, we will update the date at the top. For significant changes, we will give notice in the app.</p>
 
-  <h2>Contact</h2>
+  <h2><span>10</span>Contact</h2>
   <p>Privacy and general questions: <a href="mailto:contact@kelvara.xyz">contact@kelvara.xyz</a><br>Product support: <a href="mailto:help@kelvara.xyz">help@kelvara.xyz</a></p>
+  <p>The rules for using Kelvara are in the <a href="/terms/">Terms of Use</a>.</p>
 </main></div>
 
 <footer><div class="wrap">
-  <a href="/">Home</a><a href="/docs/">Docs</a><a href="https://x.com/kelvara_xyz" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.linkedin.com/company/kelvara-defi-security" target="_blank" rel="noopener noreferrer">LinkedIn</a><span>© 2026 Kelvara</span>
+  <a href="/">Home</a><a href="/docs/">Docs</a><a href="/terms/">Terms of use</a><a href="/privacy/">Privacy</a><a href="https://x.com/kelvara_xyz" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.linkedin.com/company/kelvara-defi-security" target="_blank" rel="noopener noreferrer">LinkedIn</a><span>© 2026 Kelvara</span>
 </div></footer>
 </body>
 </html>

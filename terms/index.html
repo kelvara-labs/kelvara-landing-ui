@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Terms of Use | Kelvara</title>
+<meta name="description" content="The terms for using kelvara.xyz and the Kelvara app: a non-custodial monitoring and pre-signed exit service for Solana DeFi positions.">
+<link rel="canonical" href="https://kelvara.xyz/terms/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#121716">
+<style>
+@font-face{font-family:"Hanken Grotesk";font-weight:300;font-display:swap;src:url(/assets/fonts/hanken-grotesk-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:"Hanken Grotesk";font-weight:400;font-display:swap;src:url(/assets/fonts/hanken-grotesk-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Hanken Grotesk";font-weight:500;font-display:swap;src:url(/assets/fonts/hanken-grotesk-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Fragment Mono";font-weight:400;font-display:swap;src:url(/assets/fonts/fragment-mono-latin-400-normal.woff2) format("woff2")}
+/* colours: same tokens as app.kelvara.xyz and the landing page */
+:root{color-scheme:dark;--night:#121716;--panel:#161c1a;--bone:#f5f7f2;--text:#c4cbc6;--mute:#7d8983;--hair:rgba(196,203,198,.12);--accent:#e7ff81;--mono:"Fragment Mono",ui-monospace,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-color:#252d29 var(--night)}
+body{margin:0;background:var(--night);color:var(--bone);font:400 17px/1.6 "Hanken Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+header .wrap{height:76px;display:flex;align-items:center;justify-content:space-between}
+.word{display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:19px;letter-spacing:-.02em;text-decoration:none}
+.word img{display:block;width:24px;height:24px}
+header nav{display:flex;gap:28px;align-items:center;font-size:15px;color:var(--mute)}
+header nav a{text-decoration:none}
+header nav a:hover{color:var(--bone)}
+header .btn{display:inline-flex;align-items:center;height:36px;padding:0 16px;border-radius:999px;background:var(--accent);color:var(--night);font-weight:500;font-size:14px}
+header .btn:hover{color:var(--night)}
+.cap{font:12.5px/1.4 var(--mono);color:var(--accent)}
+main{max-width:720px;padding:12vh 0 14vh}
+h1{margin:14px 0 0;font-weight:300;font-size:clamp(44px,6vw,80px);line-height:.98;letter-spacing:-.05em}
+.lead{margin:24px 0 0;color:var(--text);font-size:18px}
+.short{margin:40px 0 0;padding:22px 24px;border:1px solid var(--hair);border-radius:14px;background:var(--panel)}
+.short b{display:block;margin-bottom:6px;font:400 12.5px var(--mono);color:var(--mute)}
+.short ul{margin:0}
+h2{margin:56px 0 0;padding-top:24px;border-top:1px solid var(--hair);font-weight:400;font-size:24px;letter-spacing:-.02em}
+h2 span{margin-right:12px;font:400 13px var(--mono);color:var(--mute);vertical-align:3px}
+p,li{color:var(--text)}
+ul{padding-left:20px}
+li{margin:6px 0}
+li::marker{color:var(--mute)}
+strong{font-weight:500;color:var(--bone)}
+footer{border-top:1px solid var(--hair);padding:26px 0;font-size:13px;color:var(--mute)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 22px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--bone)}
+@media(max-width:860px){header nav a:not(.btn){display:none}main{padding:56px 0 72px}h2{margin-top:44px}.short{padding:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="word" href="/"><img src="/assets/kelvara-mark.png" alt="" width="24" height="24">Kelvara</a>
+  <nav aria-label="Primary"><a href="/docs/">Docs</a><a class="btn" href="https://app.kelvara.xyz/">Launch app</a></nav>
+</div></header>
+
+<div class="wrap"><main>
+  <span class="cap">Last updated 1 November 2026</span>
+  <h1>Terms of Use</h1>
+  <p class="lead">These terms cover your use of kelvara.xyz, its documentation and the Kelvara app at app.kelvara.xyz (together, "Kelvara"). By using Kelvara you agree to them. If you don't agree, please don't use it.</p>
+
+  <div class="short"><b>In short</b><ul>
+    <li>Kelvara never holds your keys or your funds. You sign everything in your own wallet.</li>
+    <li>Kelvara watches the accounts that control supported positions and can send only the exact exit you signed in advance.</li>
+    <li>It is a tool, not advice, insurance or a guarantee. Monitoring and execution can fail, and you remain responsible for your positions.</li>
+  </ul></div>
+
+  <h2><span>01</span>Who we are</h2>
+  <p>Kelvara is operated by its founding team. The legal entity is being formed; once it is registered, these terms will name it. Until then, you can reach us at <a href="mailto:contact@kelvara.xyz">contact@kelvara.xyz</a>.</p>
+
+  <h2><span>02</span>What Kelvara does</h2>
+  <p>For supported positions, Kelvara:</p>
+  <ul>
+    <li>reads public onchain data about your wallet and positions;</li>
+    <li>monitors the accounts that can change a position, such as program upgrade authorities, Squads multisigs, their members, thresholds and proposals, and unusual transaction activity;</li>
+    <li>alerts you and shows the evidence behind each reading, with its slot and source;</li>
+    <li>if you enroll in protection, stores the withdrawal transactions you signed in advance and submits one of them when the policy you approved says so.</li>
+  </ul>
+  <p>The supported positions are listed in the <a href="/docs/supported-positions/">documentation</a>. Coverage differs by position and capability, and we may add or remove positions.</p>
+
+  <h2><span>03</span>Non-custodial by design</h2>
+  <ul>
+    <li><strong>Your keys stay with you.</strong> Kelvara never asks for or receives your seed phrase or private keys. Never share them with anyone claiming to be Kelvara.</li>
+    <li><strong>Your funds stay with you.</strong> Kelvara does not hold, pool or move funds on its own account.</li>
+    <li><strong>Exact transactions only.</strong> A pre-signed exit fixes its destination, accounts, instructions, amounts, signer set and fee policy. Kelvara can submit it but cannot change it; any change would invalidate your signature. It pays only your own wallet.</li>
+    <li><strong>Signing in is not consent to transact.</strong> Signing the login message proves you control a wallet. It does not authorize any transaction.</li>
+    <li><strong>You can withdraw authorization.</strong> You can invalidate unused pre-signed exits by advancing or reclaiming their durable nonce accounts, as described in the docs.</li>
+  </ul>
+
+  <h2><span>04</span>Your responsibilities</h2>
+  <ul>
+    <li>You are at least 18 and able to enter into these terms.</li>
+    <li>You keep your wallet, devices and recovery phrase secure, and you review every transaction in your wallet before signing it.</li>
+    <li>You choose your protection policy and decide whether its rules suit your position.</li>
+    <li>You are responsible for your own tax, accounting and regulatory obligations.</li>
+    <li>You use Kelvara only for wallets and positions you own or are authorized to manage.</li>
+  </ul>
+
+  <h2><span>05</span>Acceptable use</h2>
+  <p>You must not:</p>
+  <ul>
+    <li>use Kelvara in breach of the law or of applicable sanctions, or if you are a sanctioned person or located in a sanctioned territory;</li>
+    <li>attack, overload, probe or reverse-engineer the service, or try to get around its authentication, rate limits or safety checks;</li>
+    <li>use Kelvara to conceal the origin of funds or to support fraud, market manipulation or any other unlawful activity;</li>
+    <li>misrepresent Kelvara's evidence or alerts as an audit, rating or endorsement.</li>
+  </ul>
+  <p>If you find a security issue, please report it privately to <a href="mailto:contact@kelvara.xyz">contact@kelvara.xyz</a> before disclosing it.</p>
+
+  <h2><span>06</span>Not advice, insurance or a guarantee</h2>
+  <p>Kelvara is a monitoring and execution tool. It is not investment, legal or tax advice, an audit of any protocol, insurance or a guarantee against loss. An alert, a reading or a protection trigger is not a recommendation to buy, sell or hold anything.</p>
+
+  <h2><span>07</span>Risks and limits</h2>
+  <p>DeFi is risky and you can lose some or all of your funds. In particular:</p>
+  <ul>
+    <li>Kelvara cannot predict every exploit, key compromise or protocol failure, and not every risk shows up as a change of control.</li>
+    <li>Monitoring cannot guarantee that there is enough time or liquidity to exit.</li>
+    <li>Execution depends on the protocol, on Solana and on RPC providers accepting and confirming the transaction. Congestion, fees, outages, program upgrades or vault rules can delay or block an exit.</li>
+    <li>A reading that goes stale is shown as unknown, never as safe. Kelvara may pause automatic sending when evidence is missing or a check fails, which means an exit may not be sent.</li>
+    <li>Protection may trigger when nothing malicious is happening. A false alarm can leave your funds outside the vault for a while and may cost fees or missed yield.</li>
+    <li>Third-party protocols, wallets and networks are outside our control.</li>
+  </ul>
+  <p>The <a href="/docs/limitations/">Limitations</a> page sets out what Kelvara does not promise.</p>
+
+  <h2><span>08</span>Service availability and changes</h2>
+  <p>Kelvara is under active development. We may change, suspend or discontinue features, supported positions or networks, and we may use a kill switch to stop automatic sending if we believe it is unsafe. We will try to give notice of significant changes in the app, but we don't promise that Kelvara will be uninterrupted or error-free.</p>
+
+  <h2><span>09</span>Fees</h2>
+  <p>Kelvara is currently free to use. Solana network fees and priority fees for your transactions are paid from your wallet as part of the transactions you sign. If we introduce paid plans, we will show the price and terms before you are charged.</p>
+
+  <h2><span>10</span>Intellectual property</h2>
+  <p>Kelvara's software, design, text and brand belong to us or our licensors. We give you a personal, non-exclusive, revocable right to use Kelvara under these terms. Onchain data remains public, and your wallet and its assets remain yours.</p>
+
+  <h2><span>11</span>Third-party services</h2>
+  <p>Kelvara works with services we don't control, including the Solana network, Kamino and other protocols, Squads, wallet providers, RPC providers and Calendly. Their own terms apply to your use of them, and we are not responsible for them.</p>
+
+  <h2><span>12</span>Liability</h2>
+  <p>To the extent the law allows, Kelvara is provided "as is" and "as available", and we are not liable for indirect or consequential loss, lost profits or yield, or losses caused by protocols, networks, wallets or other third parties, by market movements, or by your own actions or instructions. Where we are liable, our total liability is limited to the fees you paid us in the 12 months before the claim, or EUR 100 if you paid nothing.</p>
+  <p>Nothing in these terms limits liability that cannot be limited by law, such as for intentional misconduct, or removes rights you have as a consumer under mandatory law.</p>
+
+  <h2><span>13</span>Ending use</h2>
+  <p>You can stop using Kelvara at any time and invalidate any pre-signed exits you have given us. We may suspend or end your access if you breach these terms, if the law requires it, or to protect the service or other users. Sections that by their nature should survive, such as risks, liability and governing law, continue to apply.</p>
+
+  <h2><span>14</span>Changes to these terms</h2>
+  <p>We may update these terms. We will change the date at the top and, for significant changes, give notice in the app. If you keep using Kelvara after a change takes effect, the updated terms apply.</p>
+
+  <h2><span>15</span>Governing law</h2>
+  <p>These terms are governed by Polish law. Disputes go to the competent courts in Warsaw, Poland. If you are a consumer, you keep the protection of the mandatory laws of the country where you live and can bring a claim there.</p>
+
+  <h2><span>16</span>Contact</h2>
+  <p>Questions about these terms: <a href="mailto:contact@kelvara.xyz">contact@kelvara.xyz</a><br>Product support: <a href="mailto:help@kelvara.xyz">help@kelvara.xyz</a></p>
+  <p>How we handle information is described in the <a href="/privacy/">Privacy Policy</a>.</p>
+</main></div>
+
+<footer><div class="wrap">
+  <a href="/">Home</a><a href="/docs/">Docs</a><a href="/terms/">Terms of use</a><a href="/privacy/">Privacy</a><a href="https://x.com/kelvara_xyz" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.linkedin.com/company/kelvara-defi-security" target="_blank" rel="noopener noreferrer">LinkedIn</a><span>© 2026 Kelvara</span>
+</div></footer>
+</body>
+</html>
